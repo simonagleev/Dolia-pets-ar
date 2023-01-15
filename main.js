@@ -6,7 +6,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 // HTML
 const textPlacePet = document.querySelector('.place-pet')
 
-// Loading
+// Loaders
 const loadingManager = new THREE.LoadingManager()
 const loader = new GLTFLoader(loadingManager)
 
