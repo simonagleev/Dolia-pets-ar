@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <title>Dolia Pets</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <button id="ar-button" class="btn">Start</button>
     <div class="place-pet">Choose a place and tap to put your pet there</div>
+    <div class="canvas-container"></div>
     <div class="ui-container">
-      <div class="top-container">
 
-      </div>
-      <div class="bottom-container">
-          <div class="feed-button"></div>
-          <div class="play-button"></div>
-          <div class="sleep-button"></div>
-          <div class="shop-button"></div>
+        <div class="top-container">
+            <div class="profile-picture">
+                <img class="fred-img" src="/assets/fred.png" alt="">
+            </div>
+            <div class="profile"></div>
+        </div>
 
-          <!-- <img class="feed-btn" src="/assets/feed-icon.svg" alt="feed">
-          <img class="play-btn" src="/assets/play-icon.svg" alt="play">
-          <img class="sleep-btn" src="/assets/sleep-icon.svg" alt="sleep">
-          <img class="shop-btn" src="/assets/shop-icon.svg" alt="shop"> -->
+        <div class="bottom-container">
+            <div class="feed-button"></div>
+            <div class="play-button"></div>
+            <div class="sleep-button"></div>
+            <div class="shop-button"></div>
+        </div>
 
-      </div>
+        <div class="profile-page">
+            <div class="profile-section">
+                <div class="profile-section-header">
+                    <p class="profile-section-header-text">My pets</p>
+                </div>
+                <div class="profile-section-slider"></div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-section-header">
+                    <p class="profile-section-header-text">My traits</p>
+                </div>
+                <div class="profile-section-slider"></div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-section-header">
+                    <p class="profile-section-header-text">My games</p>
+                </div>
+                <div class="profile-section-slider"></div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-settings"></div>
+            </div>
+        </div>
     </div>
     <script type="module" src="/main.js"></script>
-  </body>
+</body>
+
 </html>

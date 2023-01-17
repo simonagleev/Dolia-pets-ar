@@ -4,10 +4,20 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 
 // HTML
+const canvasContainer = document.querySelector('.canvas-container')
+
 const textPlacePet = document.querySelector('.place-pet')
 const uiContainer = document.querySelector('.ui-container')
+const profilePage = document.querySelector('.profile-page')
+const profileIcon = document.querySelector('.profile')
+
 const feedButton = document.querySelector('.feed-button')
 const sleepButton = document.querySelector('.sleep-button')
+const playButton = document.querySelector('.play-button')
+const shopButton = document.querySelector('.shop-button')
+
+
+
 
 // PET state
 
@@ -69,7 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         renderer.setSize(window.innerWidth, window.innerHeight)
         renderer.setPixelRatio(window.devicePixelRatio)
-        document.body.appendChild(renderer.domElement)
+        canvasContainer.appendChild(renderer.domElement)
+        renderer.domElement.style.zIndex = 10
+
+
 
         const light = new THREE.HemisphereLight(0XFFFFFF, 0xbbbbff, 1)
         scene.add(light)
@@ -142,9 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 console.log('pet is doing something else')
             }
-
         })
-
 
         sleepButton.addEventListener('click', async (e) => {
             e.preventDefault()
@@ -167,6 +178,50 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
         })
+
+        playButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (petState.isInteractable) {
+                petState.isInteractable = false
+                setTimeout(() => {
+                    petState.isInteractable = true
+                }, 500)
+
+
+            } else {
+                console.log('pet is doing something else')
+            }
+        })
+
+        shopButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (petState.isInteractable) {
+                petState.isInteractable = false
+                setTimeout(() => {
+                    petState.isInteractable = true
+                }, 500)
+
+
+            } else {
+                console.log('pet is doing something else')
+            }
+        })
+
+        profileIcon.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (petState.isInteractable) {
+                petState.isInteractable = false
+                profilePage.classList.toggle('show-profile')
+                setTimeout(() => {
+                    petState.isInteractable = true
+                }, 500)
+
+
+            } else {
+                console.log('pet is doing something else')
+            }
+        })
+
 
         renderer.xr.addEventListener('sessionstart', async () => {
             const session = renderer.xr.getSession()
@@ -236,6 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 end();
             } else {
                 start()
+                profilePage.classList.toggle('show-profile-display')
             }
         })
     }
