@@ -4,7 +4,14 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 
 // HTML
-const canvasContainer = document.querySelector('.canvas-container')
+const darkScreen = document.querySelector('#dark-screen')
+
+const petSlider = document.querySelector('#pet-slider')
+const gamesSlider = document.querySelector('#games-slider')
+const traitsSlider = document.querySelector('#traits-slider')
+const traitsPage = document.querySelector(".traits-page")
+
+
 
 const textPlacePet = document.querySelector('.place-pet')
 const uiContainer = document.querySelector('.ui-container')
@@ -17,6 +24,77 @@ const playButton = document.querySelector('.play-button')
 const shopButton = document.querySelector('.shop-button')
 
 
+
+
+// MENU ACTIONS
+//Close menu when choose your pet
+const petsCollection = petSlider.children
+for (let child of petsCollection) {
+    child.addEventListener('click', (e) => {
+        e.preventDefault()
+        petState.isInteractable = false
+        profilePage.classList.toggle('show-profile')
+        darkScreen.classList.toggle('dark-screen-show')
+        setTimeout(() => {
+            petState.isInteractable = true
+        }, 500)
+    })
+}
+
+//Close menu when choose traits type
+let chosenTraitType = null;
+
+switch (chosenTraitType) {
+    case 'background':
+        console.log('Background traits')
+        break;
+    case 'head':
+        console.log('head traits')
+        break;
+    case 'accesories':
+        console.log('accesories traits')
+        break;
+}
+
+const traitsCollection = traitsSlider.children
+for (let child of traitsCollection) {
+    child.addEventListener('click', (e) => {
+        e.preventDefault()
+        petState.isInteractable = false
+
+        traitsPage.classList.toggle('show-traits-display')
+        traitsPage.classList.toggle('show-traits')
+
+        if (child.id === 'traits-slide-1') {
+            chosenTraitType = 'background'
+
+        } else if (child.id === 'traits-slide-2') {
+            chosenTraitType = 'head'
+
+        } else if (child.id === 'traits-slide-3') {
+            chosenTraitType = 'accesories'
+
+        }
+
+        setTimeout(() => {
+            petState.isInteractable = true
+        }, 500)
+    })
+}
+
+//Close menu when choose a game
+const gamesCollection = gamesSlider.children
+for (let child of gamesCollection) {
+    child.addEventListener('click', (e) => {
+        e.preventDefault()
+        petState.isInteractable = false
+        profilePage.classList.toggle('show-profile')
+        darkScreen.classList.toggle('dark-screen-show')
+        setTimeout(() => {
+            petState.isInteractable = true
+        }, 500)
+    })
+}
 
 
 // PET state
@@ -79,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         renderer.setSize(window.innerWidth, window.innerHeight)
         renderer.setPixelRatio(window.devicePixelRatio)
-        canvasContainer.appendChild(renderer.domElement)
+        document.body.appendChild(renderer.domElement)
         renderer.domElement.style.zIndex = 10
 
 
@@ -212,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (petState.isInteractable) {
                 petState.isInteractable = false
                 profilePage.classList.toggle('show-profile')
+                darkScreen.classList.toggle('dark-screen-show')
                 setTimeout(() => {
                     petState.isInteractable = true
                 }, 500)
