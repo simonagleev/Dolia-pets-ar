@@ -10,6 +10,12 @@ const petSlider = document.querySelector('#pet-slider')
 const gamesSlider = document.querySelector('#games-slider')
 const traitsSlider = document.querySelector('#traits-slider')
 const traitsPage = document.querySelector(".traits-page")
+const backArrow = document.querySelector('.back-arrow')
+
+const traitsHeader = document.querySelector('.traits-header-text')
+const leftArrow = document.querySelector('.arrow-left')
+const rightArrow = document.querySelector('.arrow-right')
+const traitsContentContainer = document.querySelector('.traits-content-container')
 
 
 
@@ -27,21 +33,43 @@ const shopButton = document.querySelector('.shop-button')
 
 
 // MENU ACTIONS
+// OPen menu
+profileIcon.addEventListener('click', (e) => {
+    e.preventDefault()
+    if (petState.isInteractable) {
+        petState.isInteractable = false
+        profilePage.classList.toggle('show-profile')
+        darkScreen.classList.toggle('dark-screen-show')
+
+        traitsPage.classList.remove('show-traits-display')
+        traitsPage.classList.remove('show-traits')
+        setTimeout(() => {
+            petState.isInteractable = true
+        }, 500)
+    } else {
+        console.log('pet is doing something else')
+    }
+})
+
 //Close menu when choose your pet
 const petsCollection = petSlider.children
 for (let child of petsCollection) {
     child.addEventListener('click', (e) => {
         e.preventDefault()
         petState.isInteractable = false
+
+        // pet.getObjectByName('Mesh003_1').material.color.r = 0
+
         profilePage.classList.toggle('show-profile')
         darkScreen.classList.toggle('dark-screen-show')
+
         setTimeout(() => {
             petState.isInteractable = true
         }, 500)
     })
 }
 
-//Close menu when choose traits type
+//Traits actions
 let chosenTraitType = null;
 
 switch (chosenTraitType) {
@@ -58,6 +86,7 @@ switch (chosenTraitType) {
 
 const traitsCollection = traitsSlider.children
 for (let child of traitsCollection) {
+    // if (child.offse)
     child.addEventListener('click', (e) => {
         e.preventDefault()
         petState.isInteractable = false
@@ -82,6 +111,125 @@ for (let child of traitsCollection) {
     })
 }
 
+//Change traits cintent
+rightArrow.addEventListener('click', (e) => {
+    e.preventDefault()
+    petState.isInteractable = false
+
+    traitsHeader.innerHTML = 'Body'
+    traitsContentContainer.innerHTML = `
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+    `
+
+    setTimeout(() => {
+        petState.isInteractable = true
+    }, 500)
+})
+
+leftArrow.addEventListener('click', (e) => {
+    e.preventDefault()
+    petState.isInteractable = false
+
+    traitsHeader.innerHTML = 'Head'
+    traitsContentContainer.innerHTML = `
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    `
+    setTimeout(() => {
+        petState.isInteractable = true
+    }, 500)
+})
+
+
 //Close menu when choose a game
 const gamesCollection = gamesSlider.children
 for (let child of gamesCollection) {
@@ -96,6 +244,21 @@ for (let child of gamesCollection) {
     })
 }
 
+//Close menu on back-arrow
+backArrow.addEventListener('click', (e) => {
+    e.preventDefault()
+    petState.isInteractable = false
+
+    traitsPage.classList.toggle('show-traits-display')
+    traitsPage.classList.toggle('show-traits')
+
+    setTimeout(() => {
+        petState.isInteractable = true
+    }, 500)
+})
+
+
+
 
 // PET state
 
@@ -106,8 +269,9 @@ const petState = {
 // Loaders
 const loadingManager = new THREE.LoadingManager()
 const loader = new GLTFLoader(loadingManager)
+const textureLoader = new THREE.TextureLoader()
 
-
+//  PET
 let pet = null;
 let mixer = null;
 let idleAnimation = null;
@@ -131,13 +295,14 @@ loader.load(
 
         blinkingAnimation.play()
         idleAnimation.play()
-        console.log(gltf.animations)
     }
 )
 
 
+
+
+// BODY
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('loaded')
     const initialize = async () => {
 
         const arButton = document.querySelector('#ar-button')
@@ -175,6 +340,49 @@ document.addEventListener('DOMContentLoaded', () => {
         circle.visible = false;
         scene.add(circle)
 
+        /**
+         * Particles
+         */
+        const particleTexture = textureLoader.load('assets/particles/food.png')
+        const particlesGeometry = new THREE.BufferGeometry()
+        const count = 20
+
+        const colors = new Float32Array(count * 3)
+        const positions = new Float32Array(count * 3)
+
+        for (let i = 0; i < count * 3; i+=3) {
+            positions[i] = pet.position.x + ((Math.random() - 0.5 ) / 15)
+            colors[i] = Math.random()
+        }
+        for (let i = 1; i < count * 3; i+=3) {
+            positions[i] = pet.position.y + 0.01
+            colors[i] = Math.random()
+        }
+        for (let i = 2; i < count * 3; i+=3) {
+            positions[i] = pet.position.z - 2
+            colors[i] = Math.random()
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+        particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
+
+        const particlesMaterial = new THREE.PointsMaterial()
+        particlesMaterial.size = 0.02
+        particlesMaterial.sizeAttenuation = true
+        particlesMaterial.color = new THREE.Color('#ff88cc')
+        particlesMaterial.transparent = true
+        particlesMaterial.alphaMap = particleTexture
+        // particlesMaterial.alphaTest = 0.01
+        // particlesMaterial.depthTest = false
+        particlesMaterial.depthWrite = false
+        particlesMaterial.blending = THREE.AdditiveBlending
+        particlesMaterial.vertexColors = true
+
+        // Points
+        const particles = new THREE.Points(particlesGeometry, particlesMaterial)
+        scene.add(particles)
+
+
         // Controllers
         const controller = renderer.xr.getController(0)
         scene.add(controller)
@@ -184,8 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // EVENTS
         controller.addEventListener('select', () => {
-            console.log(camera.position)
-            console.log(pet.quaternion)
+
             textPlacePet.style.display === 'block' ? textPlacePet.style.display = 'none' : null
 
             if (!scene.getObjectByName('pet')) {
@@ -213,7 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         mixer.addEventListener('finished', (e) => {
-            console.log(e.action._clip.name)
             if (e.action._clip.name === 'EyeSleepingOpen') {
                 blinkingAnimation.reset().play()
             } else if (e.action._clip.name === 'Eating') {
@@ -244,7 +450,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 sleepEndAnimation.loop = THREE.LoopOnce
                 sleepStartAnimation.play().reset()
                 blinkingAnimation.stop()
-                console.log(mixer)
                 setTimeout(() => {
                     sleepStartAnimation.stop()
                     sleepEndAnimation.play().reset()
@@ -285,29 +490,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
 
-        profileIcon.addEventListener('click', (e) => {
-            e.preventDefault()
-            if (petState.isInteractable) {
-                petState.isInteractable = false
-                profilePage.classList.toggle('show-profile')
-                darkScreen.classList.toggle('dark-screen-show')
-                setTimeout(() => {
-                    petState.isInteractable = true
-                }, 500)
-
-
-            } else {
-                console.log('pet is doing something else')
-            }
-        })
 
 
         renderer.xr.addEventListener('sessionstart', async () => {
             const session = renderer.xr.getSession()
             const viewerReferenceSpace = await session.requestReferenceSpace('viewer')
             const hitTestSuorce = await session.requestHitTestSource({ space: viewerReferenceSpace })
-            console.log(camera.position)
-            console.log(pet.quaternion)
+
             renderer.setAnimationLoop((timeStamp, frame) => {
                 if (!frame) return
                 const hitTestResult = frame.getHitTestResults(hitTestSuorce)
@@ -333,6 +522,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
 
+
+        // Update particles
+        const updateParticles = (elapsedTime) => {
+            for (let i = 0; i < count; i++) {
+                let i3 = i * 3
+
+                const x = particlesGeometry.attributes.position.array[i3]
+                particlesGeometry.attributes.position.array[i3 + 1] = Math.sin(elapsedTime + x)
+            }
+            particlesGeometry.attributes.position.needsUpdate = true
+        }
+
+
         // Start and end AR
         let currentSection = null;
 
@@ -350,8 +552,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderer.render(scene, camera),
                 mixer.update(clock.getDelta()),
                 pet ? pet.lookAt(camera.position.x, camera.position.y, camera.position.z) : null,
-                console.log(camera.position),
-                console.log(pet.quaternion)
+                updateParticles(clock.getElapsedTime())
 
             ])
         }
@@ -376,7 +577,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadingManager.onLoad = () => {
-        console.log('LOADED by loader')
         initialize()
     }
 

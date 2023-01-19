@@ -412,10 +412,23 @@ body {
 .arrow-right {
     transform: rotate(180deg);
     height: 100%;
+    transition: .3s;
+}
+.arrow-right:hover {
+    cursor: pointer;
+    scale: 1.15;
+    transition: .3s;
 }
 
 .arrow-left {
     height: 100%;
+    transition: .3s;
+}
+
+.arrow-left:hover {
+    cursor: pointer;
+    scale: 1.15;
+    transition: .3s;
 }
 
 .traits-content-container {
@@ -429,6 +442,7 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 
@@ -439,4 +453,16 @@ body {
 
 .traits-exit-container {
     margin-bottom: 1em;
+}
+
+.back-arrow {
+    width: 100%;
+    transition: .3s;
+
+}
+
+.back-arrow:hover {
+    cursor: pointer;
+    scale: 1.15;
+    transition: .3s;
 }
