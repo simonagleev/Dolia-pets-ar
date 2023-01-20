@@ -52,22 +52,22 @@ profileIcon.addEventListener('click', (e) => {
 })
 
 //Close menu when choose your pet
-const petsCollection = petSlider.children
-for (let child of petsCollection) {
-    child.addEventListener('click', (e) => {
-        e.preventDefault()
-        petState.isInteractable = false
+// const petsCollection = petSlider.children
+// for (let child of petsCollection) {
+//     child.addEventListener('click', (e) => {
+//         e.preventDefault()
+//         petState.isInteractable = false
 
-        // pet.getObjectByName('Mesh003_1').material.color.r = 0
+//         // pet.getObjectByName('Mesh003_1').material.color.r = 0
 
-        profilePage.classList.toggle('show-profile')
-        darkScreen.classList.toggle('dark-screen-show')
+//         profilePage.classList.toggle('show-profile')
+//         darkScreen.classList.toggle('dark-screen-show')
 
-        setTimeout(() => {
-            petState.isInteractable = true
-        }, 500)
-    })
-}
+//         setTimeout(() => {
+//             petState.isInteractable = true
+//         }, 500)
+//     })
+// }
 
 //Traits actions
 let chosenTraitType = null;
@@ -118,50 +118,50 @@ rightArrow.addEventListener('click', (e) => {
 
     traitsHeader.innerHTML = 'Body'
     traitsContentContainer.innerHTML = `
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie" loading="lazy">
-        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain" loading="lazy">
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/tie.svg" alt="tie"  >
+        <img class="traits-slider-image" src="/assets/sliders/body/chain.svg" alt="chain"  >
     `
 
     setTimeout(() => {
@@ -175,54 +175,54 @@ leftArrow.addEventListener('click', (e) => {
 
     traitsHeader.innerHTML = 'Head'
     traitsContentContainer.innerHTML = `
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1" loading="lazy">
-    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2" loading="lazy">
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-1.svg" alt="hat1"  >
+    <img class="traits-slider-image" src="/assets/sliders/head/hat-2.svg" alt="hat2"  >
     `
     setTimeout(() => {
         petState.isInteractable = true
@@ -279,22 +279,39 @@ let eatingAnimation = null
 let sleepStartAnimation = null
 let sleepEndAnimation = null
 let blinkingAnimation = null
+let foodDropAnimation1 = null
+let foodDropAnimation2 = null
+let foodDropAnimation3 = null
+let foodDropAnimation4 = null
+let foodDropAnimation5 = null
+
+
 
 loader.load(
-    '/assets/pet.glb',
+    '/assets/body-particles.gltf',
     (gltf) => {
         pet = gltf.scene
         pet.name = 'pet'
         pet.scale.set(0.3, 0.3, 0.3)
         mixer = new THREE.AnimationMixer(gltf.scene)
-        idleAnimation = mixer.clipAction(gltf.animations[2])
+        idleAnimation = mixer.clipAction(gltf.animations[3])
         eatingAnimation = mixer.clipAction(gltf.animations[1])
-        sleepStartAnimation = mixer.clipAction(gltf.animations[4])
-        sleepEndAnimation = mixer.clipAction(gltf.animations[5])
-        blinkingAnimation = mixer.clipAction(gltf.animations[3])
+        sleepStartAnimation = mixer.clipAction(gltf.animations[5])
+        sleepEndAnimation = mixer.clipAction(gltf.animations[6])
+        blinkingAnimation = mixer.clipAction(gltf.animations[4])
+        foodDropAnimation1 = mixer.clipAction(gltf.animations[7])
+        foodDropAnimation2 = mixer.clipAction(gltf.animations[8])
+        foodDropAnimation3 = mixer.clipAction(gltf.animations[9])
+        foodDropAnimation4 = mixer.clipAction(gltf.animations[10])
+        foodDropAnimation5 = mixer.clipAction(gltf.animations[11])
 
         blinkingAnimation.play()
         idleAnimation.play()
+
+        pet.getObjectByName('Sphere001').material.color.r = 0.79999
+        pet.getObjectByName('Sphere001').material.color.g = 0.55
+        pet.getObjectByName('Sphere001').material.color.b = 0.98
+        pet.getObjectByName('Sphere001').material.metalness = 0.1
     }
 )
 
@@ -331,6 +348,73 @@ document.addEventListener('DOMContentLoaded', () => {
         scene.add(light)
 
 
+
+        // CHANGE PET
+        const dispose = () => {
+            scene.traverse((child) => {
+
+                if (child instanceof THREE.Mesh) {
+                    child.geometry.dispose();
+                    // Loop through the material properties
+                    for (const key in child.material) {
+                        const value = child.material[key]
+
+                        // Test if there is a dispose function
+                        if (value && typeof value.dispose === 'function') {
+                            value.dispose()
+                        }
+                    }
+                }
+            })
+        }
+
+        const traitsCollection = traitsContentContainer.children
+        for (let child of traitsCollection) {
+            child.addEventListener('click', (e) => {
+                e.preventDefault()
+                petState.isInteractable = false
+
+                dispose()
+                // pet.getObjectByName('Mesh003_1').material.color.r = 0
+                traitsPage.classList.toggle('show-traits-display')
+                traitsPage.classList.toggle('show-traits')
+                profilePage.classList.toggle('show-profile')
+                darkScreen.classList.toggle('dark-screen-show')
+
+                setTimeout(() => {
+                    changePet()
+                }, 150)
+
+                setTimeout(() => {
+                    petState.isInteractable = true
+                }, 500)
+            })
+        }
+
+        function changePet() {
+            pet.parent.remove(pet)
+            loader.load(
+                '/assets/pet-with-hat.gltf',
+                (gltf) => {
+                    pet = gltf.scene
+                    pet.name = 'pet'
+                    pet.scale.set(0.3, 0.3, 0.3)
+                    mixer = new THREE.AnimationMixer(gltf.scene)
+                    idleAnimation = mixer.clipAction(gltf.animations[2])
+                    eatingAnimation = mixer.clipAction(gltf.animations[1])
+                    sleepStartAnimation = mixer.clipAction(gltf.animations[4])
+                    sleepEndAnimation = mixer.clipAction(gltf.animations[5])
+                    blinkingAnimation = mixer.clipAction(gltf.animations[3])
+
+                    blinkingAnimation.play()
+                    idleAnimation.play()
+                }
+            )
+            pet.position.setFromMatrixPosition(circle.matrix)
+            pet.quaternion.setFromRotationMatrix(controller.matrixWorld)
+
+        }
+
         // Helping circle 
         const circleGeometry = new THREE.RingGeometry(0.15, 0.2, 32);
         circleGeometry.rotateX(-Math.PI / 2)
@@ -340,47 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
         circle.visible = false;
         scene.add(circle)
 
-        /**
-         * Particles
-         */
-        const particleTexture = textureLoader.load('assets/particles/food.png')
-        const particlesGeometry = new THREE.BufferGeometry()
-        const count = 20
 
-        const colors = new Float32Array(count * 3)
-        const positions = new Float32Array(count * 3)
-
-        for (let i = 0; i < count * 3; i+=3) {
-            positions[i] = pet.position.x + ((Math.random() - 0.5 ) / 15)
-            colors[i] = Math.random()
-        }
-        for (let i = 1; i < count * 3; i+=3) {
-            positions[i] = pet.position.y + 0.01
-            colors[i] = Math.random()
-        }
-        for (let i = 2; i < count * 3; i+=3) {
-            positions[i] = pet.position.z - 2
-            colors[i] = Math.random()
-        }
-
-        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-        particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
-
-        const particlesMaterial = new THREE.PointsMaterial()
-        particlesMaterial.size = 0.02
-        particlesMaterial.sizeAttenuation = true
-        particlesMaterial.color = new THREE.Color('#ff88cc')
-        particlesMaterial.transparent = true
-        particlesMaterial.alphaMap = particleTexture
-        // particlesMaterial.alphaTest = 0.01
-        // particlesMaterial.depthTest = false
-        particlesMaterial.depthWrite = false
-        particlesMaterial.blending = THREE.AdditiveBlending
-        particlesMaterial.vertexColors = true
-
-        // Points
-        const particles = new THREE.Points(particlesGeometry, particlesMaterial)
-        scene.add(particles)
 
 
         // Controllers
@@ -392,17 +436,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // EVENTS
         controller.addEventListener('select', () => {
-
+            console.log(pet)
             textPlacePet.style.display === 'block' ? textPlacePet.style.display = 'none' : null
 
             if (!scene.getObjectByName('pet')) {
                 if (circle.visible === true) {
                     pet.scale.set(1, 1, 1)
                     pet.position.setFromMatrixPosition(circle.matrix)
+
                 } else {
                     pet.position.applyMatrix4(controller.matrixWorld)
+
                 }
                 pet.quaternion.setFromRotationMatrix(controller.matrixWorld)
+
                 scene.add(pet)
 
                 uiContainer.style.display = 'block'
@@ -433,9 +480,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (petState.isInteractable) {
                 petState.isInteractable = false
                 eatingAnimation.loop = THREE.LoopOnce
+                foodDropAnimation1.loop = THREE.LoopRepeat
+                foodDropAnimation2.loop = THREE.LoopRepeat
+                foodDropAnimation3.loop = THREE.LoopRepeat
+                foodDropAnimation4.loop = THREE.LoopRepeat
+                foodDropAnimation5.loop = THREE.LoopRepeat
+                foodDropAnimation1.repetitions = 3
+                foodDropAnimation2.repetitions = 3
+                foodDropAnimation3.repetitions = 3
+                foodDropAnimation4.repetitions = 3
+                foodDropAnimation5.repetitions = 3
                 idleAnimation.paused = true
                 eatingAnimation.play().reset()
-
+                foodDropAnimation1.play().reset()
+                foodDropAnimation2.play().reset()
+                foodDropAnimation3.play().reset()
+                foodDropAnimation4.play().reset()
+                foodDropAnimation5.play().reset()
             } else {
                 console.log('pet is doing something else')
             }
@@ -501,6 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!frame) return
                 const hitTestResult = frame.getHitTestResults(hitTestSuorce)
                 mixer.update(clock.getDelta())
+
                 pet ? pet.lookAt(camera.position.x, camera.position.y, camera.position.z) : null
 
                 if (hitTestResult.length > 0) {
@@ -523,42 +585,31 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
 
-        // Update particles
-        const updateParticles = (elapsedTime) => {
-            for (let i = 0; i < count; i++) {
-                let i3 = i * 3
-
-                const x = particlesGeometry.attributes.position.array[i3]
-                particlesGeometry.attributes.position.array[i3 + 1] = Math.sin(elapsedTime + x)
-            }
-            particlesGeometry.attributes.position.needsUpdate = true
-        }
-
-
         // Start and end AR
-        let currentSection = null;
+        let currentSession = null;
 
 
         const start = async () => {
-            currentSection = await navigator.xr.requestSession("immersive-ar", { requiredFeatures: ['hit-test'], optionalFeatures: ['dom-overlay'], domOverlay: { root: document.body } })
+            currentSession = await navigator.xr.requestSession("immersive-ar", { requiredFeatures: ['hit-test'], optionalFeatures: ['dom-overlay'], domOverlay: { root: document.body } })
             renderer.xr.enabled = true
             renderer.xr.setReferenceSpaceType('local')
-            await renderer.xr.setSession(currentSection)
+            await renderer.xr.setSession(currentSession)
 
             textPlacePet.style.display = 'block'
             arButton.textContent = 'End'
+            arButton.style.display = 'none'
 
             renderer.setAnimationLoop(() => [
                 renderer.render(scene, camera),
                 mixer.update(clock.getDelta()),
+
                 pet ? pet.lookAt(camera.position.x, camera.position.y, camera.position.z) : null,
-                updateParticles(clock.getElapsedTime())
 
             ])
         }
 
         const end = async () => {
-            currentSection.end()
+            currentSession.end()
             renderer.clear()
             renderer.setAnimationLoop(null)
 
@@ -567,7 +618,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         arButton.addEventListener('click', () => {
-            if (currentSection) {
+            if (currentSession) {
                 end();
             } else {
                 start()
